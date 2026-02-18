@@ -10,7 +10,7 @@ This codebase infers a gene regulatory network (GRN) by fitting a parameterized 
 
 ---
 
-## Scientific Background
+## Background
 
 Each qubit represents a gene (14 genes total). The Hamiltonian encodes directed regulatory interactions via terms of the form |1⟩⟨1|_i ⊗ Y_j, meaning gene i (when active) drives gene j. Cell states at each pseudotime point are treated as samples from a POVM measurement of the evolving quantum state. The optimizer learns the Hamiltonian interaction weights — effectively the entries of the regulatory adjacency matrix — that best explain the observed single-cell distributions over pseudotime.
 
