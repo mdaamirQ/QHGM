@@ -43,7 +43,7 @@ from pathlib import Path
 Nt = 50
 Nc = 2499
 
-data=pd.read_csv(f"/nfs/turbo/umms-ukarvind/rsudhars/quantum/final_simulations/split_files/output_df_{Nt}_rest.csv", index_col=0)
+data=pd.read_csv(f"output_df_{Nt}_rest.csv", index_col=0)
 
 times_sampled = jnp.array(data.index, dtype=jnp.float64)
 #samples = jnp.array(data.values, dtype=jnp.int64)
@@ -267,7 +267,7 @@ for step in range(num_steps):
     phis_history.append(learned_params[n_thetas:n_thetas+n_phis])
     weights_history.append(learned_params[n_thetas+n_phis:])
     # Build folder path like ./runs/14Q_Nt45_Ns1250
-    stem = Path(f"/nfs/turbo/umms-ukarvind/rsudhars/quantum/final_simulations/real_data/{exp}")
+    stem = Path(f"real_data/{exp}")
 
     stem.mkdir(parents=True, exist_ok=True)
      
@@ -292,7 +292,7 @@ from pathlib import Path
 import numpy as np
 
 
-stem = Path(f"/nfs/turbo/umms-ukarvind/rsudhars/quantum/final_simulations/real_data/{exp}")
+stem = Path(f"real_data/{exp}")
 
 # Create directory
 stem.mkdir(parents=True, exist_ok=True)
@@ -308,4 +308,5 @@ np.save(stem / "phis_history.npy", phis_history)
 np.save(stem / "weights_history.npy", weights_history)
 np.save(stem / "loss_history.npy", loss_history)
 np.save(stem / "learned_params.npy", learned_params)
+
 
