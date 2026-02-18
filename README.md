@@ -123,3 +123,4 @@ All 10 runs can be submitted in parallel as independent HPC jobs.
 - `jax_enable_x64` is required for numerical precision in the quantum evolution.
 - Hamiltonian weight parameters are passed through `tanh` scaling to bound them to `[−π/2, π/2]`.
 - The Adam optimizer is re-initialized each step to implement a decaying learning rate. This resets moment estimates, so momentum does not accumulate across steps. To preserve Adam momentum while using a schedule, replace with `optax.adam(optax.schedules.cosine_decay_schedule(...))` initialized once before the loop.
+- Data used in the paper can be found here: [link](https://drive.google.com/drive/folders/15B-uuOt3Nx-HbIBkYkX-vERSclwRqYhD?usp=sharing)
