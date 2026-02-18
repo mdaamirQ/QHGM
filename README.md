@@ -18,11 +18,7 @@ Each qubit represents a gene (14 genes total). The Hamiltonian encodes directed 
 
 
 ### Stage 1 — `pseudotime_with_via.ipynb`
-Computes pseudotime from raw single-cell data using the [VIA](https://github.com/ShobiStassen/VIA) algorithm. Outputs time-indexed CSV files of POVM outcome samples:
-```
-split_files/output_df_{Nt}_rest.csv
-```
-where rows are pseudotime points and columns are cells.
+Computes pseudotime from raw single-cell data using the [VIA](https://github.com/ShobiStassen/VIA) algorithm. 
 
 ### Stage 2 — Optimization Runs
 
