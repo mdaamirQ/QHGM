@@ -6,13 +6,13 @@
 This codebase infers a gene regulatory network (GRN) by fitting a parameterized quantum Hamiltonian to time-series single-cell measurement data. The pipeline has two stages:
 
 1. **Pseudotime calculation** (`pseudotime_with_via.ipynb`) — computes pseudotime ordering of cells from raw scRNA-seq data using the VIA trajectory inference algorithm, producing the time-indexed sample files used downstream.
-2. **Quantum optimization runs** (`final_real_1.py` – `final_real_10.py`) — fits a 14-qubit parameterized quantum circuit to the pseudotime-ordered data via negative log-likelihood minimization over POVM measurement outcomes.
+2. **Quantum optimization runs** (`final_real_1.py` - `final_real_10.py`) — fits a 14-qubit parameterized quantum circuit to the pseudotime-ordered data via negative log-likelihood minimization over POVM measurement outcomes.
 
 ---
 
 ## Background
 
-Each qubit represents a gene (14 genes total). The Hamiltonian encodes directed regulatory interactions via terms of the form |1⟩⟨1|_i ⊗ Y_j, meaning gene i (when active) drives gene j. Cell states at each pseudotime point are treated as samples from a POVM measurement of the evolving quantum state. The optimizer learns the Hamiltonian interaction weights — effectively the entries of the regulatory adjacency matrix — that best explain the observed single-cell distributions over pseudotime.
+Each qubit represents a gene (14 genes total). The Hamiltonian encodes directed regulatory interactions via terms of the form |1⟩⟨1|_i ⊗ Y_j, meaning gene i (when active) drives gene j. Cell states at each pseudotime point are treated as samples from a POVM measurement of the evolving quantum state. The optimizer learns the Hamiltonian interaction weights, effectively the regulatory adjacency matrix that best explains the observed single-cell distributions over pseudotime.
 
 ---
 
