@@ -1,5 +1,11 @@
 # Quantum Hamiltonian-Based Gene Expression Model (QHGM)
 
+**Authors:** Mohammad Aamir Sohail, Ranga R. Sudharshan, S. Sandeep Pradhan, Arvind Rao
+Date: Mar 2026 
+
+arXiv ID: [2602.19496](https://arxiv.org/abs/2602.19496) (see arXiv for version details)
+
+-------
 
 ## Overview
 
