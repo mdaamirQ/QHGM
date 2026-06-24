@@ -125,6 +125,29 @@ All 10 runs can be submitted in parallel as independent HPC jobs.
 
 ---
 
+The experiments were run using the following software environment:
+
+```text
+==================================================
+Timestamp     : 2026-06-24 16:27:32
+Platform      : Linux 4.18.0-553.123.1.el8_10.x86_64 (glibc 2.28)
+
+Python        : 3.11.7
+NumPy         : 1.26.4
+JAX           : 0.4.30
+PennyLane     : 0.38.0
+Optax         : 0.2.4
+Pandas        : 2.1.1
+Matplotlib    : 3.7.2
+SciPy         : 1.12.0
+NetworkX      : 3.5
+scikit-learn  : 1.8.0
+PyTorch       : 2.4.1+cu121
+Scanpy        : 1.11.5
+==================================================
+```
+
+
 ## Notes
 
 - `jax_enable_x64` is required for numerical precision in the quantum evolution.
