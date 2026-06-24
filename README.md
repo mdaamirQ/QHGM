@@ -111,17 +111,36 @@ L = -1/(Nt × M) × Σ_t Σ_j log( p(outcome_j | ψ(t)) + ε )
 
 ## Usage
 
-**Step 1 — Compute pseudotime:**
+## Step 1 — Compute pseudotime
+
+Open and run the Jupyter notebook:
+
 ```bash
-python pseudotime_with_via.ipynb
+jupyter notebook pseudotime_with_via.ipynb
 ```
 
-**Step 2 — Run optimization (example for a single run):**
+or
+
 ```bash
-python final_real_1.py   # fixed θ/φ, seed 1
-python final_real_6.py   # learned θ/φ, seed 1
+jupyter lab pseudotime_with_via.ipynb
 ```
-All 10 runs can be submitted in parallel as independent HPC jobs.
+
+Execute all cells in sequence from top to bottom. The notebook prints intermediate progress messages and diagnostic information during execution; these outputs are expected and can be used to monitor the computation.
+
+
+## Step 2 — Run optimization
+
+Example commands for a single run:
+
+```bash
+python final_real_1.py   # Fixed θ/φ, seed 1
+python final_real_6.py   # Learned θ/φ, seed 1
+```
+
+Each optimization run is independent and can be submitted as a separate HPC job for parallel execution across multiple GPUs or compute nodes.
+
+**Runtime:** On a classical setup using a single GPU, each run requires approximately **5 days** to complete, depending on the hardware and system load.
+
 
 ---
 
