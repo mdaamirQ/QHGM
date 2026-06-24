@@ -161,8 +161,9 @@ Matplotlib    : 3.7.2
 SciPy         : 1.12.0
 NetworkX      : 3.5
 scikit-learn  : 1.8.0
-PyTorch       : 2.4.1+cu121
+PyTorch       : 2.4.1+cu121 
 Scanpy        : 1.11.5
+pyVIA         : 0.2.4
 ==================================================
 ```
 
